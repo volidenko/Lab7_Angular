@@ -1,0 +1,13 @@
+img{
+    width: 300px;
+}
+h2{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(255, 136, 0);
+    /* text-align: center; */
+}
+
+div{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 26, 255);
+}

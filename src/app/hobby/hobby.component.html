@@ -1,0 +1,8 @@
+<h2>СТРАННЫЕ ХОББИ</h2>
+<ul>
+    <li *ngFor="let item of this.hobby">
+        <h3>{{item.title}}</h3>
+        <p>{{item.description}}</p>
+        <img [src]="item.imageUrl"/>
+    </li>
+</ul>
