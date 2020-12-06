@@ -14,7 +14,8 @@ export class ResumeComponent implements OnInit {
 resume: Resume;
 links: Link[]=[];
 p: number=0.9;
-styles = { verdanaFont: true, segoeFont: true };
+car: string;
+styless = { verdanaFont: true, segoeFont: true };
 stylesDescription= {color: 'green', fontSize: '14px'};
 
 dateFromObject: Date = new Date("Tue Dec 04 2020 21:00:00 GMT+0200");
@@ -35,5 +36,6 @@ dateFromObject: Date = new Date("Tue Dec 04 2020 21:00:00 GMT+0200");
     this.links.push({url:"https://github.com/volidenko", text:"github"});
     this.links.push({url:"https://www.facebook.com/profile.php?id=100015379385935", text:"facebook"});
     this.links.push({url:"https://portal.azure.com/?quickstart=True#home", text:"azure"});
+    this.car = "Audi";
   }
 }

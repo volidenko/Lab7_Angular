@@ -1,5 +1,5 @@
 <h2>Резюме</h2>
-<div [ngClass]="styles">
+<div [ngClass]="styless">
   <div><img [src]="this.resume.photo"/></div>
   <div>Имя: {{this.resume.name | uppercase}}</div>
   <div>Город: {{this.resume.city | uppercase}}</div>
@@ -7,8 +7,6 @@
   <div>Телефон: {{this.resume.phone}}</div>
   <div [ngStyle]="stylesDescription"> email: {{this.resume.email}}</div>
 </div>
-
-
 <div *ngIf="resume.skills.length>0">
   <ul class="list-group"> Навыки:
     <li *ngFor="let skill of resume.skills" class="list-group-item list-group-item-action">
@@ -24,6 +22,14 @@
   </ul>
 </div>
 <div>Зарплата: {{ this.resume.salary | currency}}</div>
+<hr>
+<div [ngSwitch]="car">
+  <p *ngSwitchCase="'Audi'">Мое авто {{car}}</p>
+  <p *ngSwitchCase="'BMW'">Мое авто {{car}}</p>
+  <p *ngSwitchCase="'Ford'">Мое авто {{car}}</p>
+  <p *ngSwitchCase="'Lada'">Мое авто {{car}}</p>
+  <p *ngSwitchDefault>У меня нету авто. Хожу пешком</p>
+</div>
 <div>Percent: {{p | percent}}</div>
 <hr>
 <div><footer><div>Дата составления резюме: {{dateFromObject| date : "short":"UTC":"ru"}}</div></footer></div>
