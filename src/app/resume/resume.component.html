@@ -24,10 +24,10 @@
 <div>Зарплата: {{ this.resume.salary | currency}}</div>
 <hr>
 <div [ngSwitch]="car">
-  <p *ngSwitchCase="'Audi'">Мое авто {{car}}</p>
-  <p *ngSwitchCase="'BMW'">Мое авто {{car}}</p>
-  <p *ngSwitchCase="'Ford'">Мое авто {{car}}</p>
-  <p *ngSwitchCase="'Lada'">Мое авто {{car}}</p>
+  <p *ngSwitchCase="'Audi'">Мое авто: {{car}}</p>
+  <p *ngSwitchCase="'BMW'">Мое авто: {{car}}</p>
+  <p *ngSwitchCase="'Ford'">Мое авто: {{car}}</p>
+  <p *ngSwitchCase="'Lada'">Мое авто: {{car}}</p>
   <p *ngSwitchDefault>У меня нету авто. Хожу пешком</p>
 </div>
 <div>Percent: {{p | percent}}</div>
