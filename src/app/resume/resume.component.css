@@ -1,6 +1,16 @@
+.verdanaFont{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.segoeFont{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: dimgray;
+}
+
 img{
     width: 100px;
 }
+
 h2{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:rgb(255, 136, 0);

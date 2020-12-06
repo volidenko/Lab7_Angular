@@ -1,13 +1,17 @@
 <h2>Резюме</h2>
-<div><img [src]="this.resume.photo"/></div>
-<div>Имя: {{this.resume.name | uppercase}}</div>
-<div>Телефон: {{this.resume.phone}}</div>
-<div>Город: {{this.resume.city | uppercase}}</div>
-<div>Опыт работы: {{this.resume.experience}} лет</div>
+<div [ngClass]="styles">
+  <div><img [src]="this.resume.photo"/></div>
+  <div>Имя: {{this.resume.name | uppercase}}</div>
+  <div>Город: {{this.resume.city | uppercase}}</div>
+  <div>Опыт работы: {{this.resume.experience}} лет</div>
+  <div>Телефон: {{this.resume.phone}}</div>
+  <div [ngStyle]="stylesDescription"> email: {{this.resume.email}}</div>
+</div>
+
 
 <div *ngIf="resume.skills.length>0">
-  <ul> Навыки:
-    <li *ngFor="let skill of resume.skills">
+  <ul class="list-group"> Навыки:
+    <li *ngFor="let skill of resume.skills" class="list-group-item list-group-item-action">
       {{skill | lowercase}}
     </li>
   </ul>
@@ -20,5 +24,6 @@
   </ul>
 </div>
 <div>Зарплата: {{ this.resume.salary | currency}}</div>
+<div>Percent: {{p | percent}}</div>
 <hr>
 <div><footer><div>Дата составления резюме: {{dateFromObject| date : "short":"UTC":"ru"}}</div></footer></div>

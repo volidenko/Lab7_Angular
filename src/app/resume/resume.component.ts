@@ -13,6 +13,9 @@ registerLocaleData(localeRu, "ru");
 export class ResumeComponent implements OnInit {
 resume: Resume;
 links: Link[]=[];
+p: number=0.9;
+styles = { verdanaFont: true, segoeFont: true };
+stylesDescription= {color: 'green', fontSize: '14px'};
 
 dateFromObject: Date = new Date("Tue Dec 04 2020 21:00:00 GMT+0200");
   constructor() { }
@@ -20,6 +23,7 @@ dateFromObject: Date = new Date("Tue Dec 04 2020 21:00:00 GMT+0200");
     this.resume =new Resume();
     this.resume.name="Hordiienko Volodymyr";
     this.resume.phone="+38 (097) 937-99-92";
+    this.resume.email="hvhvhvhvhvh@i.ua";
     this.resume.city="Kropyvnytskyi";
     this.resume.experience=11;
     this.resume.salary=1000;
