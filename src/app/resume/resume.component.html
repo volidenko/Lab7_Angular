@@ -1,14 +1,24 @@
-<h2>Resume</h2>
+<h2>Резюме</h2>
 <div><img [src]="this.resume.photo"/></div>
-<div>Name: {{this.resume.name | uppercase}}</div>
-<div>Phone: {{this.resume.phone}}</div>
-<div>City: {{this.resume.city | uppercase}}</div>
-<div>Experience: {{this.resume.experience }} years</div>
-<div>Skill:</div>
-<ul>
-    <li *ngFor="let skill of resume.skills">{{skill}}</li>
-</ul>
-<h3>Ссылки на ресурсы</h3>
-<ul>
-  <li *ngFor="let link of links"><a href={{link.url}}>{{link.text}}</a></li>
-</ul>
+<div>Имя: {{this.resume.name | uppercase}}</div>
+<div>Телефон: {{this.resume.phone}}</div>
+<div>Город: {{this.resume.city | uppercase}}</div>
+<div>Опыт работы: {{this.resume.experience}} лет</div>
+
+<div *ngIf="resume.skills.length>0">
+  <ul> Навыки:
+    <li *ngFor="let skill of resume.skills">
+      {{skill | lowercase}}
+    </li>
+  </ul>
+</div>
+<div *ngIf="links.length>0">
+  <ul> Ссылки на ресурсы:
+    <li *ngFor="let link of links">
+      <a href={{link.url}}>{{link.text}}</a>
+    </li>
+  </ul>
+</div>
+<div>Зарплата: {{ this.resume.salary | currency}}</div>
+<hr>
+<div><footer><div>Дата составления резюме: {{dateFromObject| date : "short":"UTC":"ru"}}</div></footer></div>

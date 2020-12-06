@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Link } from 'src/link';
 import { Resume } from '../Resume';
+import localeRu from "@angular/common/locales/ru";
+import {registerLocaleData} from "@angular/common";
+registerLocaleData(localeRu, "ru");
 
 @Component({
   selector: 'app-resume',
@@ -10,6 +13,8 @@ import { Resume } from '../Resume';
 export class ResumeComponent implements OnInit {
 resume: Resume;
 links: Link[]=[];
+
+dateFromObject: Date = new Date("Tue Dec 04 2020 21:00:00 GMT+0200");
   constructor() { }
   ngOnInit(): void {
     this.resume =new Resume();
@@ -17,6 +22,7 @@ links: Link[]=[];
     this.resume.phone="+38 (097) 937-99-92";
     this.resume.city="Kropyvnytskyi";
     this.resume.experience=11;
+    this.resume.salary=1000;
     this.resume.photo="../../assets/images/dzhonni-depp.webp";
     this.resume.skills;
     this.resume.skills.push("Create ADO.NET");
