@@ -1,0 +1,1 @@
+export class Link{url:string; text:string}

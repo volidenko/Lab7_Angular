@@ -4,6 +4,6 @@ export class Resume{
     email: string;
     city:string;
     experience: number;
-    skills: Array<string>;
+    skills: string[]=[];
     photo: string;
 }
