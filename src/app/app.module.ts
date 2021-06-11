@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { JoinPipe } from './join.pipe';
 import { ResumeComponent } from './resume/resume.component';
+import { SkillsComponent } from './skills/skills.component';
+import { WorkExpComponent } from './work-exp/work-exp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JoinPipe,
-    ResumeComponent
+    ResumeComponent,
+    SkillsComponent,
+    WorkExpComponent
   ],
   imports: [
     BrowserModule
